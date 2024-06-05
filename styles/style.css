@@ -1,0 +1,1356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+ --main-color: #F5B7B1;
+ --black-color: #0E0E0D;
+ --border: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+html { 
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+    background-color: white;
+}
+
+html::-webkit-scrollbar-track {
+background-color: transparent ;
+}
+
+html::-webkit-scrollbar-thumb { 
+    border-radius: 3rem;
+    background-color: var(--black-color);
+}
+
+
+body{
+    background-color: var(--main-color);
+}
+
+section{
+    padding: 3.5rem 7%;
+}
+
+a {
+    color: #F08080;
+    text-decoration: none;
+}
+
+.btn{
+    margin-top: 1rem;  
+    display: inline-block;
+    padding: 1.5rem 3.75rem;
+    border-radius: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--black-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+opacity: 0.9;
+}
+
+.heading {
+color:#F5B7B1;
+text-transform: uppercase;
+font-size: 4rem;
+margin-bottom: 3.5rem;
+border-bottom: 0.1rem solid #fff;
+}
+
+.heading span {
+    color: var(--black-color);
+    text-transform: uppercase;
+    }
+
+
+/* Header */
+
+
+.search {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.search input {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    width: 200px;
+}
+
+.search button {
+    border: none;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+}
+
+
+
+
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.75);
+    transform: scaleY(0);
+}
+
+.header .search-form.active {
+    transform: scaleY(1);  
+}
+
+.header .search-form i {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black-color);
+}
+
+.header .search-form input {
+width: 100½;
+}
+
+.header .logo img {
+    height: 8rem;
+}
+
+.header {
+    background-color: rgba(176, 121, 121, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+.header .navbar a {
+    margin: 0 0.5rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+}
+
+.header.navbar .active,
+.header.navbar a:hover {
+    border-color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.header .buttons button {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+}
+
+.header .cart-items-container {
+    position: absolute;
+    top: 95%;
+    height: calc(100vh - 9rem);
+    width: 35rem;
+    background-color: #fff;
+    box-shadow: 0px 20px 14px 0px rgba(0, 0, 0, 0.75);
+    right: -100%;
+}
+
+.header .cart-items-container.active {
+    right: 3rem;
+}
+
+.header .cart-items-container .cart-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.header .cart-items-container .cart-item:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black-color)
+}
+
+.header .cart-items-container .cart-item img {
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3 {
+    font-size: 2rem;
+    color: var(--black-color);
+    padding-bottom: 0.5rem;
+}
+
+.header .cart-items-container .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+.header .cart-items-container .btn{
+width: 100%;
+text-align: center;
+border-radius: unset;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* Home */
+.AnaSayfa {
+    min-height: 100vh;
+    background: url(../images/1615122424-happybirthday.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -145px;
+    display: flex;
+    align-items: center;
+}
+
+.AnaSayfa .content {
+    max-width: 60rem;
+    font-size: 2rem;
+}
+
+.AnaSayfa .content h3 {
+    font-size: 3.5rem;
+    color: var(--black-color);
+}
+
+.AnaSayfa .content p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #F08080;
+}
+
+/* Product */
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    padding: 3rem;
+    border-radius: 3rem;
+    background-color: #fff;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.menu .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu .box-container .box .menu-category {
+font-size: 1.2rem;
+text-transform: lowercase;
+
+}
+
+.menu .box-container .box h3 {
+font-size: 3rem;
+padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    font-size: 2.5em;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+
+    
+/*! urun and */
+
+/*! urun start */
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    }
+
+.products .box-container .box {
+text-align: center;
+background-color: #fff;
+position: relative;
+border-radius: 3rem;
+height: 60rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 3rem;
+}
+.products .box-container .box .box-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.products .box-container .box .box-head .title {
+    font-size: 1.4rem;
+}
+
+.products .box-container .box .box-head {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+
+.products .box-container .box-bottom {
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+z-index: 10;
+}
+.products .box-container .box-bottom .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+.products .box-container .box-bottom .info .price {
+ font-size: 3rem;
+}
+.products .box-container .box-bottom .info .amount {
+font-size: 1.4rem;
+}
+.Urunler {
+    margin-bottom: 3rem;
+}
+
+.Urunler .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.Urunler .box {
+    width: calc(33.333% - 1rem);
+    background-color: #fff;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.Urunler .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1; /* New property to maintain aspect ratio */
+}
+
+.Urunler .box .box-head {
+    padding: 2rem;
+    text-align: center;
+}
+
+.Urunler .box .menu-category {
+    font-size: 1.2rem;
+    text-transform: lowercase;
+}
+
+.Urunler .box h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.Urunler .box .price {
+    font-size: 1.6rem;
+}
+
+.Urunler .box-bottom {
+    padding: 1rem;
+    text-align: center;
+}
+
+.Urunler .box-container .box {
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 3rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.Urunler .box-container .box .box-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+    font-size: 2.5rem;
+}
+
+.Urunler .box-container .box .box-head .title {
+    font-size: 1.4rem;
+}
+
+.Urunler .box-container .box .box-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.Urunler .box-container .box-bottom .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Urunler .box-container .box-bottom .info .price {
+    font-size: 3rem;
+}
+
+.Urunler .box-container .box-bottom .info .amount {
+    font-size: 1.4rem;
+}
+
+
+
+
+
+/* Hakkımızda bölümü stilleri */
+.about {
+    margin-bottom: 4rem; /* .blogs'taki margin-bottom ile aynı yüksekliği sağlamak için */
+}
+
+.about .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem; /* .blogs'taki gap ile aynı uzaklık için */
+}
+
+.about .content {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about .content h3 {
+    font-size: 3rem; /* .blogs'taki h3 boyutuyla aynı */
+    margin-bottom: 1rem;
+    color: #E57070;
+}
+
+.about .content p {
+    margin-bottom: 1.6rem;
+    color:#000;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.about .content .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color:#E57070;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.about .content .btn:hover {
+    background-color:#E57070;
+}
+
+.about .image img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+/* Yorumlar bölümü stilleri */
+.review {
+    margin-bottom: 4rem; /* .blogs'taki margin-bottom ile aynı yüksekliği sağlamak için */
+}
+
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem; /* .blogs'taki gap ile aynı uzaklık için */
+}
+
+.review .box {
+    text-align: center;
+    padding: 9rem;
+    border-radius: 3rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Box'un içindeki fotoğrafı pozisyonlamak için */
+}
+
+
+
+.review .box img.user {
+
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+    aspect-ratio: 1; /* New property to maintain aspect ratio */
+    border-radius: 50%;
+    
+ 
+
+}
+
+
+.review .box h3 {
+    font-size: 2rem; /* .blogs'taki h3 boyutuyla aynı */
+    color: #dc3545;
+    margin-bottom: 1rem; /* Daha iyi bir görünüm için */
+}
+
+.review .box p {
+    margin-bottom: 1rem;
+}
+
+.review .box .stars {
+    font-size: 1.5rem;
+    color: #ffc107;
+    margin-bottom: 1rem;
+}
+
+/* İletişim bölümü stilleri */
+.contact {
+    margin: 50px 0;
+}
+
+.contact .heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #E57070;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact .image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact form {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-left: 30px; 
+  }
+
+.contact form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact form .inputBox {
+    margin-bottom: 20px;
+}
+
+.contact form .inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact form .inputBox input:focus {
+    border-color: #E57070;
+}
+
+.contact form textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact form textarea:focus {
+    border-color: #E57070;
+}
+
+.contact form .btn {
+    display: inline-block;
+    background-color: #E57070;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.contact form .btn:hover {
+    background-color: #ff8f8f;
+}
+
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #E57070;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #E57070;
+}
+
+.map-container {
+    margin-bottom: 30px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+.social-media {
+    margin-bottom: 30px;
+}
+
+.social-media a {
+    color: #333;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #E57070;
+}
+
+.working-hours {
+    margin-bottom: 30px;
+}
+
+.working-hours h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.working-hours p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+
+
+.faq h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.question p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+  
+  /* Bloglar bölümü stilleri */
+  .blogs {
+    margin-bottom: 3rem;
+}
+
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.blogs .box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blogs .box .image img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.blogs .box .content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blogs .box .content p {
+    margin-bottom: 1rem;
+}
+
+.blogs .box .content .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color:#E57070;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.blogs .box .content .btn:hover .image img {
+    background-color:#E57070;
+}
+  
+  /* Footer bölümü stilleri */
+  .footer {
+    background-color:#E57070;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .footer .search-input {
+    width: 60%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer .share {
+   padding: 2rem 0;
+  }
+
+  .footer .share a {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: #b7534a;
+    font-size: 2rem;
+    border: var(--border);
+    border-radius: 50%;
+    margin: 0.3rem;
+  }
+
+.footer .share a:hover {
+    background-color: var(--black-color);
+}
+  
+  .footer .links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+  }
+  .footer .links a:hover {
+    background-color: var(--black-color);
+    opacity: 0.7;
+  }
+  .footer .credit {
+    margin-top: 2rem;
+  }
+
+  /*burdan başlıyor yeni css*/
+  .contact .inputBox i {
+    font-size: 2.5rem; 
+    color: var(--black-color); 
+}
+.history {
+    padding: 3.5rem 7%;
+}
+.history .content {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem; 
+}
+
+.history h2 {
+    color:#E57070;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.history p {
+    color: #666;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.mission-vision {
+    padding: 3.5rem 7%;
+}
+.mission-vision .content {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem; 
+}
+
+.mission-vision h2 {
+    color:#E57070;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.mission-vision .mission,
+.mission-vision .vision {
+    margin: 2rem auto;
+}
+
+.mission-vision h3 {
+    color:#E57070;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.mission-vision p {
+    color: #777;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+
+.values {
+    padding: 3.5rem 7%;
+}
+.values .content {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem; 
+}
+
+.values h2 {
+    color:#E57070;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.values ul li {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.values ul li strong {
+    color:#E57070;
+}
+
+
+/* Ekibimiz Bölümü */
+.team {
+    padding: 3.5rem 7%;
+}
+.team .content {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+}
+
+.team h2 {
+    color:#E57070;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.team-member {
+    max-width: 300px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: 300px; /* Sabit yükseklik */
+    object-fit: cover; /* Oranları koruyarak resmi kes */
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    color: #555;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.team-member p {
+    color: #777;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.add-review {
+    margin-top: 60px;
+}
+
+.add-review h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add-review form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    margin-top: 5px;
+}
+
+.input-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7587 7.75736C16.0932 8.09186 16.0932 8.60814 15.7587 8.94264L11.8018 12.8996C11.4673 13.2341 10.951 13.2341 10.6165 12.8996L6.65954 8.94264C6.32505 8.60814 6.32505 8.09186 6.65954 7.75736C6.99404 7.42287 7.51032 7.42287 7.84481 7.75736L11.0001 10.9126L14.1553 7.75736C14.4898 7.42287 15.0061 7.42287 15.3406 7.75736H15.7587Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px;
+}
+
+.input-group button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button[type="submit"]:hover {
+    background-color: #555;
+}
+  
+
+.cart-items-container {
+    display: none; /* Başlangıçta gizli */
+  }
+  
+  .cart-items-container.active {
+    display: block; /* Aktif olduğunda görünür */
+  }
+  
+
+
+
+
+  .category {
+    margin: 2rem 0;
+}
+
+.category-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.boxu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.boxu {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: calc(33.333% - 1.5rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boxu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.boxu .boxu-head {
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+.boxu .boxu-head .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.boxu .boxu-head .name {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.boxu .image img {
+    width: 100%;
+    height: auto;
+}
+
+.boxu .boxu-bottom {
+    padding: 1rem;
+}
+
+.boxu .info .price {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.boxu .info .amount {
+    display: block;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.boxu .product-btn a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #E57070;
+    color: #fff;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.boxu .product-btn a:hover {
+    background-color: #0056b3;
+}
+
+
+.main-title {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.main-title h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.kutu {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.kutu .image img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.kutu .content {
+    padding: 25px;
+}
+
+.kutu .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.kutu .title:hover {
+    color: #dc3545;
+}
+
+.kutu .content span {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.kutu .content p {
+    color: #495057;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+
+
+
+/*! responsive baslangıcı */
+/*! responsive baslangıcı */
+@media (max-width: 991px){
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    .header .logo img {
+        height: 7rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .products .box-container .box .box-head .name {
+        font-size: 3.4rem;
+    }
+    .box {
+        width: calc(50% - 1rem);
+        margin-bottom: 2rem; /* boxların altında biraz boşluk bırakmak için */
+    }
+    .box-head {
+        flex-direction: column; /* Yataydan dikey sıraya diz */
+        align-items: center; /* İçeriği yatayda ortala */
+      }
+    
+      .box-head img {
+        width: 100%; /* Resmi tam genişliğe sığdır */
+        margin-bottom: 1rem; /* Resim ile altındaki metin arasında boşluk */
+      }
+    
+      .menu-category {
+        font-size: 2rem; /* Yazı boyutunu küçült */
+      }
+    
+      
+      .Urunler {
+        padding: 1.5rem; /* İçerik padding'i */
+      }
+    
+      .Urunler .heading {
+        font-size: 2.5rem; /* Başlık yazı boyutu (daha büyük) */
+        text-align: center; /* Başlığı ortala */
+      }
+    
+      .Urunler .box-container {
+        display: flex; /* Kutuları yatayda sıraya diz */
+        flex-wrap: wrap; /* Ekrana sığmayan kutuları alta aktar */
+        justify-content: space-between; /* Kutuları aralarda boşluk bırak */
+      }
+    
+      .Urunler .box {
+        width: calc(48% - 1rem); /* Kutuları %50 genişlikte yap (2 kutu yan yana) */
+        margin-bottom: 1.5rem; /* Kutular arasında boşluk */
+      }
+    
+      .Urunler .box-head {
+        flex-direction: column; /* İçeriği dikey sıraya diz */
+        align-items: center; /* İçeriği yatayda ortala */
+      }
+    
+      .Urunler .box-head img {
+        width: 100%; /* Resmi tam genişliğe sığdır */
+        margin-bottom: 1rem; /* Resim ile altındaki metin arasında boşluk */
+      }
+    
+      .Urunler .menu-category,
+      .Urunler h3 {
+        font-size: 1.8rem; /* Yazı boyutlarını küçült */
+      }
+    
+      .Urunler .price {
+        display: flex; /* Fiyatı yatayda sırala */
+        justify-content: center; /* Fiyatı ortala */
+        margin-top: 1rem; /* Fiyatın üstünde boşluk */
+      }
+    
+      .Urunler .price span {
+        font-size: 1.2rem; /* İndirimli fiyatın yazı boyutunu küçült */
+        margin-left: 0.5rem; /* İndirimli fiyatın soluna boşluk */
+      }
+    
+      .Urunler .box-bottom .btn {
+        font-size: 1rem; /* Düğme yazı boyutunu küçült */
+      }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F08080; /* Açılan menü arka plan rengi */
+        padding: 10px 0;
+        text-align: center;
+    }
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar a {
+        margin: 10px 0;
+        color: black; /* Açılan menü bağlantı rengi */
+        text-decoration: none;
+        display: block; /* Bağlantıları dikey hale getir */
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-btn,
+    .fa-shopping-cart,
+    .menu-icon {
+        margin-left: 10px;
+    }
+    .box {
+        width: calc(100% - 1rem);
+        margin-bottom: 2rem; /* boxların altında biraz boşluk bırakmak için */
+    }
+    .Urunler .box {
+        width: 100%; /* Küçük ekranlarda kutuları tek sıraya diz */
+      }
+}

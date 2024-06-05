@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pastacilik Web Sitesi</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+        <img src="images/Ekran görüntüsü_11-5-2024_173258_.jpeg" alt="logo">
+    </a>
+    <nav class="navbar">
+        <a href="index.html" class="active">Ana Sayfa </a>
+        <a href="hakkinda.html">Hakkında </a>
+        <a href="menu.html">Menü </a>
+        <a href="urunler.html">Ürünler </a>
+        <a href="yorumlar.html">Yorumlar</a>
+        <a href="iletisim.html">İletişim </a>
+        <a href="blog.html">Blog </a>
+    </nav>
+    <div class="buttons">
+      <button class="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button id="shopping-cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+      <button id="menu-btn" class="menu-icon">
+        <i class="fa-solid fa-list"></i>
+      </button>
+    </div>
+    
+    <div class="search" id="search-box">
+      <input type="text" class="search-input" placeholder="Ara" />
+      <button class="btn btn-primary">Ara</button>
+    </div>
+    
+    <div class="cart-items-container" id="cart-items-container">
+      <div class="cart-item">
+        <i class="fas fa-times"></i>
+        <img src="images/homemade-strawberry-cake-4.jpg" alt="menu" />
+        <div class="content">
+          <h3>Pasta</h3>
+          <div class="price">300 TL</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <i class="fas fa-times"></i>
+        <img src="images/party-donuts-sallys-baking-addiction.png" alt="menu" />
+        <div class="content">
+          <h3>Donut</h3>
+          <div class="price">30 TL</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <i class="fas fa-times"></i>
+        <img src="images/raspberry-sugar-cookies-with-dark-chocolate.jpg" alt="menu" />
+        <div class="content">
+          <h3>Kurabiye</h3>
+          <div class="price">10 TL</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <i class="fas fa-times"></i>
+        <img src="images/pink-frosted-sugar-cookies.jpg" alt="menu" />
+        <div class="content">
+          <h3>Cupcake</h3>
+          <div class="price">18 TL</div>
+        </div>
+      </div>
+      <a href="urunler.html" class="btn">Şimdi Sipariş Ver</a>
+    </div>
+    
+</header>
+
+<!-- home section start -->
+<section class="AnaSayfa">
+    <div class="content"> 
+        <h3> En Güzel ve En Özel Anlarınızda</h3>
+        <p> Her anınızda tatlı lezzetlerimizle yanınızda olmak isteriz siz de istemez misiniz?
+        </p>
+        <a href="urunler.html" class="btn"> Şipariş Vermek İçin Tıklayınız</a>
+    </div>
+</section>
+<!-- home section end -->
+
+<!-- urunler section start -->
+<section class="Urunler">
+    <h1 class="heading"> <span> Menu </span></h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="box-head">
+                <img src="images/homemade-strawberry-cake-4.jpg" alt="menu"/>
+                <span class="menu-category">PASTA</span>
+                <h3>Yas Pasta Çeşitleri</h3>
+                <div class="price"> <span> 300 - 400 TL </span></div>
+            </div>
+            <div class="box-bottom">
+                <a href="#" class="btn">detaylar</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/party-donuts-sallys-baking-addiction.png" alt="menu"/>
+                <span class="menu-category">DONUT</span>
+                <h3>Donut Çeşitleri</h3>
+                <div class="price"> <span> 20 - 30 TL </span></div>
+            </div>
+            <div class="box-bottom">
+                <a href="#" class="btn">detaylar</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/raspberry-sugar-cookies-with-dark-chocolate.jpg" alt="menu"/>
+                <span class="menu-category">KURABİYE</span>
+                <h3>Kurabiye Çeşitleri</h3>
+                <div class="price"> <span> 8 - 10 TL </span> </div>
+            </div>
+            <div class="box-bottom">
+                <a href="#" class="btn">detaylar</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <img src="images/pink-frosted-sugar-cookies.jpg" alt="menu"/>
+                <span class="menu-category">Cupcake</span>
+                <h3>Meyveli Cupcake Çeşitleri</h3>
+                <div class="price"> <span> 15 - 18 TL </span> </div>
+            </div>
+            <div class="box-bottom">
+                <a href="#" class="btn">detaylar</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- urunler section end -->
+
+<!-- Products section -->
+<section class="Urunler">
+  <h1 class="heading">our <span> Urunler </span></h1>
+  <div class="box-container">
+      <div class="box">
+          <div class="box-head">
+              <span class="title">Yas Pasta</span>
+              <a href="#" class="name">Tasarım Pastalar</a>
+          </div>
+          <div class="image">
+              <img src="images/homemade-DIY-wedding-cake.jpg" alt="">
+          </div>
+          <div class="box-bottom">
+              <div class="info">
+                  <b class="price">Özel Tasarım Yaş Pasta</b>
+                  <span class="amount">Meyveli ve Çikolatalı Pastalar</span>
+              </div>
+              <div class="product-btn">
+                  <a href="#">
+                      <i class="fas fa-plus"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="box">
+          <div class="box-head">
+              <span class="title">Şekilli Kurabiyeler</span>
+              <a href="#" class="name">Kakaolu ve Sade Kurabiye</a>
+          </div>
+          <div class="image">
+              <img src="images/chocolate-sugar-cookies-1-400x400.jpg" alt="">
+          </div>
+          <div class="box-bottom">
+              <div class="info">
+                  <b class="price">Kurabiye</b>
+                  <span class="amount">Özel tasarım Kurabiyeler</span>
+              </div>
+              <div class="product-btn">
+                  <a href="#">
+                      <i class="fas fa-plus"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="box">
+          <div class="box-head">
+              <span class="title">Cupcake</span>
+              <a href="#" class="name">Meyveli Cupcake</a>
+          </div>
+          <div class="image">
+              <img src="images/pumpkin-cream-cheese-muffins-425x638.png" alt="">
+          </div>
+          <div class="box-bottom">
+              <div class="info">
+                  <b class="price"> Balkabaklı Cupcake </b>
+                  <span class="amount"> Cupcake</span>
+              </div>
+              <div class="product-btn">
+                  <a href="#">
+                      <i class="fas fa-plus"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="about" id="about">
+    <h1 class="heading">Hakkımızda <span>Hakkımızda</span></h1>
+    <div class="row">
+      <div class="image">
+        <img src="images/homemade-strawberry-cake.jpg" alt="about" />
+      </div>
+      <div class="content">
+        <h3>Pastalarımızın sırları ne?</h3>
+        <p>
+          Sevgili dostlar,
+
+Pastalarımızı bu kadar özel yapan şeyin ne olduğunu hiç merak ettiniz mi? Gelin, bu lezzet dolu sırrımızı sizlerle paylaşalım.
+
+Pastalarımızı hazırlarken kullandığımız malzemelerin hepsi taptaze ve doğal. En kaliteli süt, en taze yumurtalar ve mevsimin en güzel meyveleri ile çalışıyoruz. Böylece, her dilimde doğallığın tadını çıkarıyorsunuz.
+
+
+        </p>
+        <p>
+          Her pastamızı büyük bir sevgiyle yapıyoruz. İşimizi tutkuyla yapıyor, her bir pastayı sizin için özel kılmak istiyoruz. Bu yüzden, her detayına özen gösteriyoruz.
+          
+          Yılların getirdiği deneyimle, her pastayı ustalıkla hazırlıyoruz. Annelerimizin tariflerinden ilham alıyor, geleneksel tatları modern dokunuşlarla harmanlıyoruz. Böylece, her ısırıkta çocukluğunuzun tatlarını hatırlıyorsunuz.
+          
+          
+        </p>
+        <p>
+Sizin mutluluğunuz bizim için çok önemli. O yüzden, sizin isteklerinizi dinliyor ve hayalinizdeki pastayı gerçeğe dönüştürüyoruz. Özel günlerinizi daha da özel kılmak için buradayız.
+
+Pastalarımız sadece lezzetli değil, aynı zamanda göze de hitap ediyor. Renkli süslemeler ve özenli tasarımlar ile her pastamız birer sanat eseri gibi. Gözlerinize de, midenize de bayram ettiriyoruz.
+
+Her bir pastamızda, sizin için sakladığımız bu sırları bulacaksınız. Gelin, bu eşsiz lezzetleri birlikte keşfedelim. Sizleri bekliyoruz!
+        </p>
+        <a href="hakkinda.html" class="btn">Daha Fazlası İçin</a>
+      </div>
+    </div>
+  </section>
+  <!--! about section end  -->
+
+  <!--! review section start  -->
+  <section class="review" id="review">
+    <h1 class="heading">Müşterilerin <span>Müşterilerin Yorumları</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="images/998e8109c0907316a5f45c00abe3f0f7.jpg" alt="avatar" class="user" />
+            <p>Doğum günü pastamı yaptırmıştım çok memnun kaldım çok lezzetli ve özenle hazırlanmış. 
+              Hayalimdeki pastadan bile daha güzel olmuştu</p>
+            <h3>Cemre B.</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/D4MPWY0XkAAtsku.jpg" alt="avatar" class="user" />
+            <p>Yeni olmanıza rağmen ürünleriniz çok lezzetli.</p>
+            <h3>Aytaç Ş.</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/112504390-melisa-asli-pamuk-kimdir.jpg" alt="avatar" class="user" />
+            <p>Hayatımda yediğim en muazzam trileçe olabilir ellerinize sağlık.</p>
+            <h3>Melisa Y.</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+    </div>
+</section>
+  <!--! review section end  -->
+
+  <!--! contact section start  -->
+  <section class="contact" id="contact">
+    <h1 class="heading">İletişim <span>Adresimiz</span></h1>
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.114575806325!2d27.889461776502788!3d39.64713590211894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b70047c67fe6a5%3A0xfdf9ecde70aa2a46!2sZeynep%20Pastanesi!5e0!3m2!1str!2str!4v1716309544435!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <form>
+        <h3>Bizimle İletişime Geç</h3>
+        <div class="inputBox">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Ad soyad" />
+        </div>
+        <div class="inputBox">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="E-mail Adres" />
+        </div>
+        <div class="inputBox">
+          <i class="fas fa-phone"></i>
+          <input type="number" placeholder="Telefon Numarası" />
+        </div>
+        <input type="submit" class="btn" value="Şimdi iletişime Geç" />
+      </form>
+    </div>
+  </section>
+  <!--! contact section end  -->
+
+  <!--! blogs section start  -->
+  <section class="blogs" id="blogs">
+    <h1 class="heading">our <span>blog</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="images/white-chocolate-buttercream-frosting-3.jpg" alt="blog" />
+        </div>
+        <div class="content">
+          <a href="#" class="title">Pasta Yapmanın Püf Noktaları</a>
+          <span>Zeynep Karaca / 29 Ocak, 2024</span>
+          <p>
+            Pasta Nasıl Yapılır
+          </p>
+          <a href="bloglar.html" class="btn">Daha Fazla Oku</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="images/easy-strawberry-rhubarb-pie.png" alt="blog" />
+        </div>
+        <div class="content">
+          <a href="#" class="title">Lezzetli Turta Yapmanın Sırrı Ne?</a>
+          <span>Zeynep Karaca / 29 Ocak, 2024</span>
+          <p>
+            Çilekli Kokulu Turtalar
+          </p>
+          <a href="#" class="btn">Daha Fazla Oku</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="images/homemade-croissants-425x638.png" alt="blog" />
+        </div>
+        <div class="content">
+          <a href="#" class="title">Kruvasanın Büyülü Dünyası</a>
+          <span>Zeynep Karaca / 29 Ocak, 2024</span>
+          <p>
+            Kruvasan ve Tarihi
+          </p>
+          <a href="#" class="btn">Daha Fazla Oku</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--! blogs section end  -->
+
+  <!--! footer section start  -->
+  <section class="footer">
+    <div class="search">
+      <input type="text" class="search-input" placeholder="Ara" />
+      <button class="btn btn-primary">Ara</button>
+    </div>
+    <div class="share">
+      <a href="#" class="fab fa-facebook"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+      <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+      <a href="#" class="active">Anasayfa</a>
+      <a href="#">Hakkında</a>
+      <a href="#">Menü</a>
+      <a href="#">Ürünler</a>
+      <a href="#">Yorumlar</a>
+      <a href="#">İletişim</a>
+      <a href="#">Bloglar</a>
+    </div>
+
+    <div class="credit">
+      Hazırlayan <span>Zeynep Karaca</span> | Tüm Hakları Saklıdır
+    </div>
+  </section>
+
+
+<script src="styles/script.js"></script>
+
+
+</body>
+</html>
